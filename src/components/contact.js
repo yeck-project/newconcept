@@ -1,7 +1,7 @@
 import React from "react";
 import { GatsbyImage } from "gatsby-plugin-image";
 
-export default function Avatar({ name, picture }) {
+export default function Contact() {
   return (
     <div className="flex items-center">
       <GatsbyImage
