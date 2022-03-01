@@ -4,6 +4,10 @@ import { HelmetDatoCms } from "gatsby-source-datocms";
 import { graphql } from "gatsby";
 import Header from "../components/header";
 import Services from "../components/services";
+import CallToAction from "../components/callToAction";
+import BusinessCases from "../components/businessCases";
+import Clients from "../components/clients";
+import Contact from "../components/contact";
 
 export default function Index() {
 
@@ -12,6 +16,10 @@ export default function Index() {
     <>
       <Header/>
       <Services/>
+      <CallToAction/>
+      <BusinessCases/>
+      <Clients/>
+      <Contact/>
     </>
   );
 }
