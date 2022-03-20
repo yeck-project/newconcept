@@ -1,5 +1,16 @@
 import React from "react";
-import { GatsbyImage } from "gatsby-plugin-image";
+
+export function ClientLogo() {
+  return (
+  <>
+    <div class="mb-4 w-full lg:w-1/3 px-2">
+      <div class="py-16 bg-gray-50 rounded">
+        <img class="mx-auto h-6" src="atis-assets/logo/brands/slack.png" alt=""/>
+      </div>
+    </div>
+  </>
+  );
+}
 
 export default function Clients() {
   return (
@@ -13,36 +24,9 @@ export default function Clients() {
         </div>
       </div>
       <div class="w-full lg:w-1/2 flex flex-wrap -mx-2">
-        <div class="mb-4 w-full lg:w-1/3 px-2">
-          <div class="py-16 bg-gray-50 rounded">
-            <img class="mx-auto h-6" src="atis-assets/logo/brands/slack.png" alt=""/>
-          </div>
-        </div>
-        <div class="mb-4 w-full lg:w-1/3 px-2">
-          <div class="py-16 bg-gray-50 rounded">
-            <img class="mx-auto h-6" src="atis-assets/logo/brands/dropbox.png" alt=""/>
-          </div>
-        </div>
-        <div class="mb-4 w-full lg:w-1/3 px-2">
-          <div class="py-16 bg-gray-50 rounded">
-            <img class="mx-auto h-6" src="atis-assets/logo/brands/spotify.png" alt=""/>
-          </div>
-        </div>
-        <div class="mb-4 w-full lg:w-1/3 px-2">
-          <div class="py-16 bg-gray-50 rounded">
-            <img class="mx-auto h-6" src="atis-assets/logo/brands/amazon.png" alt=""/>
-          </div>
-        </div>
-        <div class="mb-4 w-full lg:w-1/3 px-2">
-          <div class="py-16 bg-gray-50 rounded">
-            <img class="mx-auto h-6" src="atis-assets/logo/brands/netflix.png" alt=""/>
-          </div>
-        </div>
-        <div class="w-full lg:w-1/3 px-2">
-          <div class="py-16 bg-gray-50 rounded">
-            <img class="mx-auto h-6" src="atis-assets/logo/brands/stripe.png" alt=""/>
-          </div>
-        </div>
+        <ClientLogo/>
+        <ClientLogo/>
+        <ClientLogo/>
       </div>
     </div>
   </div>
