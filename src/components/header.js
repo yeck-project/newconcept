@@ -1,6 +1,8 @@
 import React from "react";
 import { GatsbyImage } from "gatsby-plugin-image";
 import HeaderNav from "./headerNav";
+import {Link, Trans, useTranslation} from 'gatsby-plugin-react-i18next';
+
 
 export default function Header() {
   return (
@@ -13,7 +15,7 @@ export default function Header() {
           <div class="w-full text-center lg:text-left">
             <div class="max-w-lg mx-auto lg:mx-0">
               <h2 class="mb-3 text-4xl lg:text-5xl font-bold font-heading text-primary">
-                <span>Build &amp; Launch without</span>
+                <span><Trans>Hi people</Trans></span>
               </h2>
             </div>
             <div class="max-w-lg mx-auto lg:mx-0">
