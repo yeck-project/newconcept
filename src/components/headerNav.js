@@ -1,5 +1,35 @@
 import React, { useState } from "react";
+import {Link, useI18next, I18nextContext} from 'gatsby-plugin-react-i18next';
+
 import { GatsbyImage } from "gatsby-plugin-image";
+
+export function LanguageSelect () {
+  const {languages, originalPath} = useI18next();
+  const context = React.useContext(I18nextContext);
+  console.log(context.language);
+
+  return (
+    <>
+      <div class="p-10">
+        <div class="dropdown inline-block relative">
+          <button class="bg-gray-300 text-gray-700 font-semibold py-2 px-4 rounded inline-flex items-center">
+            <span class="mr-1">{context.language}</span>
+            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/> </svg>
+          </button>
+          <ul class="dropdown-menu absolute text-gray-700">
+            {languages.map((lng) => (
+              <li key={lng} class="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap">
+                <Link to={originalPath} language={lng}>
+                  {lng}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </>
+  );
+};
 
 export function NavbarMobile ({ menuItems, logo }) {
   const [open, SetOpen] = useState(true);
@@ -43,6 +73,7 @@ export function NavbarMobile ({ menuItems, logo }) {
               <a href={`/${menuItem.toLowerCase()}`} class="inline-block mb-6 lg:mb-0 lg:mr-3 w-5/6 lg:w-auto py-2 px-6 leading-loose bg-primary hover:bg-white hover:text-primary hover:border-solid border border-primary text-white font-semibold rounded-l-xl rounded-t-xl transition duration-200">{menuItem}</a>
             )
             })}
+            <LanguageSelect/>
           </div>
         </nav>
       </div>
@@ -77,6 +108,7 @@ export function NavbarDesktop ({ menuItems, logo }) {
           </>
         )
         })}
+        <LanguageSelect/>
       </ul>
       <a class="lg:inline-block py-2 px-6 text-sm font-bold rounded-l-xl rounded-t-xl bg-primary hover:bg-white hover:text-primary hover:border-solid border border-primary text-white font-semibold rounded-l-xl rounded-t-xl transition duration-200" href="#">Contact Us</a>
     </nav>

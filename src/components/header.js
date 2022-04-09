@@ -10,7 +10,7 @@ export default function Header() {
   <HeaderNav/>
   <div class="bg-gray-50 pt-12 lg:pt-20 pb-20 radius-for-skewed relative py-24 overflow-hidden">
     <div class="relative max-w-4xl mb-20 mx-auto px-4 text-center">
-      <span class="text-lg text-black font-semibold tracking-widest uppercase">Develop your skill</span>
+      <span class="text-lg text-black font-semibold tracking-widest uppercase"> <Trans>Hi people</Trans></span>
       <h2 class="mt-8 mb-8 text-black text-4xl lg:text-6xl font-bold uppercase">Take care of your performance every day.</h2>
       <a class="inline-block mb-3 lg:mb-0 lg:mr-3 w-full lg:w-auto py-2 px-6 leading-loose bg-primary hover:bg-white hover:text-primary hover:border-solid border border-primary text-white font-semibold rounded-l-xl rounded-t-xl transition duration-200" href="#">Get started free</a>
     </div>
